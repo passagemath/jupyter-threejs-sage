@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jupyter-threejs-sage"
+description = "Sage: Open Source Mathematics Software: Jupyter extension for 3D graphics with threejs"
+license = {text = "MIT License"}
+authors = [{name = "The Sage Developers", email = "sage-support@googlegroups.com"}]
+classifiers = [
+    "Development Status :: 6 - Mature",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Framework :: Jupyter",
+]
+urls = {Homepage = "https://github.com/sagemath/threejs-sage"}
+dynamic = ["version"]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+packages = ["jupyter_threejs_sage"]
+
+[tool.setuptools.package-data]
+jupyter_threejs_sage = ["jupyter_threejs_sage/static"]
